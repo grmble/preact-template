@@ -1,25 +1,34 @@
-import { h } from 'preact';
-import { Link } from 'preact-router/match';
-import style from './style.css';
+import { h } from 'preact'
+import { useState } from 'preact/hooks'
+import { Link } from 'preact-router/match'
+import classnames from 'classnames'
 
-const Header = () => (
-	<header class={style.header}>
-		<a href="/" class={style.logo}>
-			<img src="../../assets/preact-logo-inverse.svg" alt="Preact Logo" height="32" width="32" />
-			<h1>Preact CLI</h1>
-		</a>
-		<nav>
-			<Link activeClassName={style.active} href="/">
-				Home
-			</Link>
-			<Link activeClassName={style.active} href="/profile">
-				Me
-			</Link>
-			<Link activeClassName={style.active} href="/profile/john">
-				John
-			</Link>
-		</nav>
-	</header>
-);
+const Header = () => {
+	const [isExpanded, setExpanded] = useState(false)
+	const toggleExpanded = (_: Event) => setExpanded(!isExpanded)
 
-export default Header;
+	return <nav class="navbar is-info" role="navigation" aria-label="main navigation">
+		<div class="navbar-brand">
+			<a href="/" class="navbar-item">
+				<h1>Preact CLI</h1>
+			</a>
+			<a class={classnames("navbar-burger", { 'is-active': isExpanded })}
+				role="button" aria-label="menu" aria-expanded={isExpanded}
+				data-target="nav-menu"
+				onClick={toggleExpanded}>
+				<span aria-hidden="true"> </span>
+				<span aria-hidden="true"> </span>
+				<span aria-hidden="true"> </span>
+			</a>
+		</div>
+		<div class={classnames("navbar-menu", { 'is-active': isExpanded })} id="nav-menu">
+			<div class="navbar-start">
+				<Link href="/" activeClassName='is-active' class='navbar-item'>Home</Link>
+				<Link href="/profile" activeClassName='is-active' class='navbar-item'>Me</Link>
+				<Link href="/profile/john" activeClassName='is-active' class='navbar-item'>John</Link>
+			</div>
+		</div>
+	</nav>
+}
+
+export default Header
