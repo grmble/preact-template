@@ -1,5 +1,6 @@
 import { h } from "preact"
 import { useEffect, useState } from "preact/hooks"
+import { FinalFormExample } from "../../components/demo/final_form"
 
 interface Props {
   user: string
@@ -22,10 +23,7 @@ const Profile = ({ user }: Props) => {
 
       <div>Current time: {new Date(time).toLocaleString()}</div>
 
-      <p>
-        <button onClick={() => setCount((count) => count + 1)}>Click Me</button>{" "}
-        Clicked {count} times.
-      </p>
+      <FinalFormExample onSubmit={console.log} />
     </div>
   )
 }
