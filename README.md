@@ -2,17 +2,17 @@
 
 ## CLI Commands
 
-- `yarn`: Installs dependencies
+- `pnpm`: Installs dependencies
 
-- `yarn dev`: Run a development, HMR server
+- `pnpm dev`: Run a development, HMR server
 
-- `yarn serve`: Run a production-like server
+- `pnpm serve`: Run a production-like server
 
-- `yarn build`: Production-ready build
+- `pnpm build`: Production-ready build
 
-- `yarn lint`: Pass TypeScript files using ESLint
+- `pnpm lint`: Pass TypeScript files using ESLint
 
-- `yarn test`: Run Jest and Enzyme with
+- `pnpm test`: Run Jest and Enzyme with
   [`enzyme-adapter-preact-pure`](https://github.com/preactjs/enzyme-adapter-preact-pure) for
   your tests
 
@@ -32,3 +32,8 @@ versions are in the tree? Anyway, the error is that a property "\_\_\_H" can not
 
 Solution: fix the Cjs/Mjs mess. Solution from https://github.com/vitest-dev/vitest/issues/1652
 See vite.confit.ts
+
+## Visual Code Plugins
+
+- eslint
+- prettier
