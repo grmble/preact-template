@@ -1,6 +1,6 @@
 import { h } from "preact"
-import { useEffect, useState } from "preact/hooks"
 import { FinalFormExample } from "../../components/demo/final_form"
+import { H1, H2 } from "../../components/html/headings"
 
 interface Props {
   user: string
@@ -8,22 +8,12 @@ interface Props {
 
 // Note: `user` comes from the URL, courtesy of our router
 const Profile = ({ user }: Props) => {
-  const [time, setTime] = useState<number>(Date.now())
-
-  useEffect(() => {
-    const timer = setInterval(() => setTime(Date.now()), 1000)
-    return () => clearInterval(timer)
-  }, [])
-
   return (
-    <div>
-      <h1>Profile: {user}</h1>
-      <p>This is the user profile for a user named {user}.</p>
-
-      <div>Current time: {new Date(time).toLocaleString()}</div>
-
+    <section class="container mx-auto">
+      <H1>Final Form Demo</H1>
+      <H2>Field Level Validation</H2>
       <FinalFormExample onSubmit={console.log} />
-    </div>
+    </section>
   )
 }
 

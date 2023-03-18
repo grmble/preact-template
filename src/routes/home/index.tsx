@@ -1,27 +1,24 @@
 import { h } from "preact"
+import { H1 } from "../../components/html/headings"
+import { Hr, P } from "../../components/html/content"
 
 const Home = () => {
   return (
     <section class="container mx-auto">
-      <h1
-        class="my-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900
-               dark:text-white md:text-5xl lg:text-6xl"
-      >
-        Company Homepage
-      </h1>
+      <H1 class="my-4">Company Homepage</H1>
       {/* manual hr */}
-      <hr class="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 dark:text-white md:text-5xl lg:text-6xl" />
+      <Hr />
       {/* or just use the prose from the typography plugin */}
-      <p class="mb-3 font-light text-gray-500 dark:text-gray-400">
+      <P class="mb-3">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tempus elit purus, sed mollis nisl bibendum et.
         Vestibulum ac dui eu neque hendrerit gravida vitae at augue. Donec eget pharetra turpis, ac viverra urna. Nulla
         porta porta urna sit amet condimentum. Nam quis porta nisl, aliquam maximus sem. Phasellus consectetur a velit
         nec accumsan. Nulla finibus in urna sollicitudin bibendum. Vestibulum sit amet sem eget eros convallis blandit.
         Maecenas ultrices tristique nulla ac ultricies. Quisque commodo, neque eget finibus dapibus, arcu nulla
         tincidunt sem, eu scelerisque eros massa vitae nibh.
-      </p>
+      </P>
 
-      <p class="mb-3 font-light text-gray-500 dark:text-gray-400">
+      <P class="mb-3">
         Nulla justo erat, varius eu pharetra in, faucibus id mauris. Aliquam mi risus, imperdiet at lobortis vitae,
         tincidunt non nunc. Curabitur at orci purus. Donec malesuada libero gravida dolor congue interdum. Vestibulum
         pretium suscipit purus. Cras quis sem ut diam convallis malesuada eu et sapien. Nullam cursus posuere orci in
@@ -30,7 +27,7 @@ const Home = () => {
         Aliquam finibus, quam ac congue sodales, orci nisi laoreet purus, sit amet molestie eros purus nec neque.
         Praesent at erat sit amet ante imperdiet commodo eget porta orci. Donec nunc libero, posuere a arcu non, aliquam
         eleifend nisl.
-      </p>
+      </P>
       {/* prose dark text color is gray-700 */}
       <div class="prose">
         <hr />

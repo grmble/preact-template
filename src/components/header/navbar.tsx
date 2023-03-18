@@ -54,7 +54,7 @@ const NavLink = ({ label, href, setExpanded }: NavLinkProps) => (
     <Match path={href}>
       {({ matches }: { matches: boolean }) => {
         const classes = "block rounded py-2 pl-3 pr-4 md:border-0 md:p-0"
-        const active = "text-white bg-blue-700 dark:text-white md:text-white md:bg-transparent"
+        const active = "text-white bg-blue-700 dark:text-white md:text-blue-700 md:bg-transparent"
         const inactive =
           "text-gray-700 hover:bg-gray-100 " + // light mobile
           "dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white " + // dark mobile
