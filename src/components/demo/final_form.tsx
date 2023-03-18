@@ -40,7 +40,7 @@ const HInput = ({ input, meta, label }: FieldRenderProps<string>) => {
       <div class="field-body">
         <div class="field">
           <div class="control">
-            <input id={id} class="input" {...input} />
+            <input id={id} type="text" class="input" {...input} />
           </div>
           {meta.error && meta.touched && (
             <span role="alert" class="help is-danger">

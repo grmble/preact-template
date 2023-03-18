@@ -71,6 +71,7 @@ const HInput = <R extends FieldValues, K extends Path<R>>(
           <div class="control">
             <input
               id={id}
+              type="text"
               class="input"
               {...props.register(props.name, props.options)}
             />
