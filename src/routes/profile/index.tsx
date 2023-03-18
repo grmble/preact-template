@@ -9,7 +9,6 @@ interface Props {
 // Note: `user` comes from the URL, courtesy of our router
 const Profile = ({ user }: Props) => {
   const [time, setTime] = useState<number>(Date.now())
-  const [count, setCount] = useState<number>(10)
 
   useEffect(() => {
     const timer = setInterval(() => setTime(Date.now()), 1000)

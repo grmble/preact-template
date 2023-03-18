@@ -1,4 +1,4 @@
-import tailwindcss from 'tailwindcss'
+import tailwindcss from "tailwindcss"
 
 /**
  * Function that mutates the original webpack config.
@@ -10,10 +10,9 @@ import tailwindcss from 'tailwindcss'
  * @param {Record<string, unknown>} options - this is mainly relevant for plugins (will always be empty in the config), default to an empty object
  */
 export default (config, _env, helpers, _options) => {
-    const postCssLoaders = helpers.getLoadersByName(config, 'postcss-loader');
-    postCssLoaders.forEach(({ loader }) => {
-        const plugins = loader.options.postcssOptions.plugins;
-        plugins.unshift(tailwindcss);
-      });
-  };
-
+  const postCssLoaders = helpers.getLoadersByName(config, "postcss-loader")
+  postCssLoaders.forEach(({ loader }) => {
+    const plugins = loader.options.postcssOptions.plugins
+    plugins.unshift(tailwindcss)
+  })
+}
