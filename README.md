@@ -1,4 +1,10 @@
-# Loglifter
+# Preact Template
+
+- prettier
+- eslint
+- jest/testing-library
+- final form
+- tailwindcss
 
 ## CLI Commands
 
@@ -9,6 +15,8 @@
 - `pnpm serve`: Run a production-like server
 
 - `pnpm build`: Production-ready build
+
+- `pnpm prod`: Production-ready build for deployment with a basepath (e.g. github)
 
 - `pnpm lint`: Pass TypeScript files using ESLint
 
@@ -48,6 +56,25 @@ with React Hook Form the types get very unwieldy.
 - eslint
 - prettier
 - tailwind css intellisense
+
+## Routing
+
+This repo uses hash routing, because I want to publish on github.
+If you have a custom server, you can omit the hashing, but you need
+server support or the reload does not work.
+
+Hash-Routing also means that we can not pre-render, because the DOM apis
+are not present at compile time.
+
+On the bright side, the routing is not affected by the basepath,
+so there is much less to change than for an application that wants
+"real" routing with a basepath.
+
+Also: see https://joshuatz.com/posts/2021/deploy-preact-from-subdirectory/ and
+https://www.baeldung.com/servlet-redirect-forward
+
+Note that `manifest.json` has a wrong start_url for deployment.
+That is not a problem for me, I just fix this in the following scripts.
 
 ## Branches
 

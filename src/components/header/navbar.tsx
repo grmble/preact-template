@@ -2,7 +2,7 @@
 //
 // to adjust the background color:
 //
-// replace bg-gray-50 and bg-gray-900 with the color of your choice
+// replace bg-gray-50 and bg-gray-800 with the color of your choice
 // everything blue replace with your primary
 //
 

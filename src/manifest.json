@@ -1,6 +1,6 @@
 {
-  "name": "Loglifter",
-  "short_name": "Loglifter",
+  "name": "Preact Template",
+  "short_name": "preact-template",
   "start_url": "/",
   "display": "standalone",
   "orientation": "portrait",

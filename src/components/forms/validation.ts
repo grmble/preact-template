@@ -1,8 +1,8 @@
 /* adapted from final form demo code
- * 
+ *
  * this abuses javascripts untypedness to do its thing,
  * i just wrapped some types around it to make the warnings and errors
- * go away. 
+ * go away.
  */
 export const required = (value: unknown) => (value ? undefined : "Required")
 // eslint-disable-next-line @typescript-eslint/no-explicit-any

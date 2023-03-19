@@ -1,4 +1,6 @@
 import tailwindcss from "tailwindcss"
+import {publicPath} from './package.json'
+import webpack from 'webpack'
 
 /**
  * Function that mutates the original webpack config.
@@ -15,4 +17,10 @@ export default (config, _env, helpers, _options) => {
     const plugins = loader.options.postcssOptions.plugins
     plugins.unshift(tailwindcss)
   })
+
+  // publicPath for serving non-root
+  config.output = config.output || {}
+  if (process.env.NODE_ENV === 'production') {
+    config.output.publicPath = publicPath
+  }
 }
