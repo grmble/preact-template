@@ -2,7 +2,7 @@
   "private": true,
   "name": "loglifter",
   "version": "0.0.0",
-  "license": "MIT",
+  "license": "EPL-2.0",
   "publicPath": "/loglifter/",
   "scripts": {
     "build": "cross-env NODE_ENV=development NODE_OPTIONS=--openssl-legacy-provider preact build --no-prerender",

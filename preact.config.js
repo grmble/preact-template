@@ -1,6 +1,6 @@
 import tailwindcss from "tailwindcss"
-import {publicPath} from './package.json'
-import webpack from 'webpack'
+import { publicPath } from "./package.json"
+import webpack from "webpack"
 
 /**
  * Function that mutates the original webpack config.
@@ -20,7 +20,7 @@ export default (config, _env, helpers, _options) => {
 
   // publicPath for serving non-root
   config.output = config.output || {}
-  if (process.env.NODE_ENV === 'production') {
+  if (process.env.NODE_ENV === "production") {
     config.output.publicPath = publicPath
   }
 }
