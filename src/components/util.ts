@@ -6,7 +6,11 @@ export type ClassProps = {
     class?: string
 }
 
-export const mergeClasses = (classes: string, props: ClassProps) => {
+export const mergeClassProps = (classes: string, props: ClassProps) => {
     return { ...props, class:  mergeClassStrings(classes, props.class)}
 }
 
+export const classFromAttributes = (v?: string | { value?: string | undefined } | undefined) => {
+return !v ? "" : typeof v === "string" ? v : v.value ? v.value : ""
+}
+  

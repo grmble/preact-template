@@ -1,6 +1,6 @@
 import { h } from "preact"
-import { H1 } from "../../components/html/headings"
-import { Hr, P } from "../../components/html/content"
+import { H1 } from "../components/html/headings"
+import { Hr, P } from "../components/html/content"
 
 const Home = () => {
   return (

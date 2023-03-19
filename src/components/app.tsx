@@ -5,7 +5,7 @@ import Header from "./header"
 
 // Code-splitting is automated for `routes` directory
 import Home from "../routes/home"
-import Profile from "../routes/profile"
+import About from "../routes/about"
 
 const App = () => (
   <div id="app">
@@ -13,8 +13,8 @@ const App = () => (
     <main>
       <Router>
         <Route path="/" component={Home} />
-        <Route path="/about/" component={Profile} user="me" />
-        <Route path="/services/" component={Profile} user="services" />
+        <Route path="/about/" component={About} route="/about/" topic="About" />
+        <Route path="/services/" component={About} route="/about/services" topic="Services" />
       </Router>
     </main>
   </div>
