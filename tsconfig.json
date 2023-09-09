@@ -19,5 +19,5 @@
       "react-dom": ["./node_modules/preact/compat"]
     }
   },
-  "include": ["src/**/*", "./jset.setup.ts"]
+  "include": ["src/**/*", "./jest.setup.ts"]
 }
